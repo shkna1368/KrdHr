@@ -31,14 +31,14 @@ pipeline {
 
           stage('Buid docker image') {
             steps {
-               bat "docker build --tag=KrdHR:latest ."
+               bat "docker build --tag=krd-hr:latest ."
                         echo " docker end"
             }
         }
 
           stage('run docker image') {
             steps {
-               bat " docker run -d -p8090:8090 KrdHR:latest"
+               bat " docker run -d -p8090:8090 krd-hr:latest"
                         echo " docker end"
             }
         }
